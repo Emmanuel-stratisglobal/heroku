@@ -1,4 +1,9 @@
 ﻿@page
-@model GettingStarted.Frontend.Pages.Apps.IndexModel
-@{
-}
+@model AppIndexModel
+<h1>Heroku Apps</h1>
+<ul>
+    @foreach (var app in Model.Apps)
+    {
+        <li>@app.GetProperty("name").GetString()</li>
+    }
+</ul>

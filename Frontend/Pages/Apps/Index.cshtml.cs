@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace GettingStarted.Frontend.Pages;
 
-public class IndexModel : PageModel
+public class AppIndexModel : PageModel
 { 
     public List<JsonElement> Apps { get; set; } = new();
 
