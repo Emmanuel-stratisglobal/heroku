@@ -16,7 +16,7 @@ public class AppIndexModel : PageModel
         client.DefaultRequestHeaders.Add("Authorization", $"Bearer {apiKey}");
         client.DefaultRequestHeaders.Add("Accept", "application/vnd.heroku+json; version=3");
 
-        var response = await client.GetAsync("https://api.heroku.com/addons");
+        var response = await client.GetAsync("https://api.heroku.com/apps");
         var json = await response.Content.ReadAsStringAsync();
         Apps = JsonSerializer.Deserialize<List<JsonElement>>(json) ?? new();
     }
